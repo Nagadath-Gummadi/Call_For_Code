@@ -1,0 +1,817 @@
+{
+  "intents": [
+    {
+      "intent": "WelcomeGreetings",
+      "examples": [
+        {
+          "text": "good evening"
+        },
+        {
+          "text": "good night"
+        },
+        {
+          "text": "gd nyt"
+        },
+        {
+          "text": "gd mrng"
+        },
+        {
+          "text": "gd eveng"
+        },
+        {
+          "text": "hai bot"
+        },
+        {
+          "text": "gd afternoon"
+        },
+        {
+          "text": "hey"
+        },
+        {
+          "text": "hai"
+        },
+        {
+          "text": "hi"
+        },
+        {
+          "text": "hello"
+        },
+        {
+          "text": "hey there"
+        },
+        {
+          "text": "good morning"
+        },
+        {
+          "text": "good afternoon"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "know_your_application_status",
+      "examples": [
+        {
+          "text": "What is my status"
+        },
+        {
+          "text": "what is my application status"
+        },
+        {
+          "text": "Am I Selected"
+        },
+        {
+          "text": "Am I Qualified"
+        },
+        {
+          "text": "what is my update"
+        },
+        {
+          "text": "any updates on my application"
+        }
+      ],
+      "description": ""
+    },
+    {
+      "intent": "apply_job",
+      "examples": [
+        {
+          "text": "Apply for a job"
+        },
+        {
+          "text": "apply me a job"
+        },
+        {
+          "text": "kindly apply a job for me"
+        },
+        {
+          "text": "proceed to apply for a job"
+        },
+        {
+          "text": "get a job for me"
+        }
+      ],
+      "description": ""
+    }
+  ],
+  "entities": [
+    {
+      "entity": "Email_Id",
+      "values": [
+        {
+          "type": "patterns",
+          "value": "mailid",
+          "patterns": [
+            "^([a-zA-Z0-9_\\-\\.]+)@([a-zA-Z0-9_\\-\\.]+)\\.([a-zA-Z]{2,5})$"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-number",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Greetings",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Good AfterNoon",
+          "synonyms": [
+            "gd aftrn",
+            "good aftrn",
+            "good noon",
+            "gd noon",
+            "gd afternoon",
+            "Afternoon",
+            "Noon"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Hey",
+          "synonyms": [
+            "Hey There",
+            "Hi",
+            "Hai"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Good Evening",
+          "synonyms": [
+            "evng",
+            "Evening",
+            "gd Evening",
+            "Good evng",
+            "gd evng"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "GoodMorning",
+          "synonyms": [
+            "morning",
+            "good mrng",
+            "mrng",
+            "gdmrng",
+            "gd mrng"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Hello",
+          "synonyms": [
+            "Hello There"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "apply_enquiry",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "how",
+          "synonyms": [
+            "procedure",
+            "process",
+            "want",
+            "way"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "Stopping_Words",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "Ok",
+          "synonyms": [
+            "Ha",
+            "Great",
+            "Good",
+            "Sure",
+            "Okay",
+            "M",
+            "Mm",
+            "Hm",
+            "Hmm",
+            "then"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Thank You",
+          "synonyms": [
+            "Bye",
+            "Thank u",
+            "Thanku",
+            "Thanks",
+            "Tq",
+            "Thnq"
+          ]
+        }
+      ]
+    },
+    {
+      "entity": "Education",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "M.Tech",
+          "synonyms": [
+            "Master of Engineering",
+            "Masters",
+            "PG",
+            "Post Graduation",
+            "MS"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "B.Tech",
+          "synonyms": [
+            "Bachelor of technology",
+            "b tech",
+            "UG",
+            "Under Graduate",
+            "U.G"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "Deg",
+          "synonyms": [
+            "Degree"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "applicationstatus",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "application status",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "update on status",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "status of application",
+          "synonyms": []
+        },
+        {
+          "type": "synonyms",
+          "value": "selected",
+          "synonyms": [
+            "qualified"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "accomplished",
+          "synonyms": []
+        }
+      ],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "sys-percentage",
+      "values": [],
+      "fuzzy_match": true
+    },
+    {
+      "entity": "confirmation",
+      "values": [
+        {
+          "type": "synonyms",
+          "value": "No",
+          "synonyms": [
+            "nope",
+            "not at all",
+            "no",
+            "not now",
+            "no for now",
+            "later some time"
+          ]
+        },
+        {
+          "type": "synonyms",
+          "value": "yes",
+          "synonyms": [
+            "yeah",
+            "ya",
+            "yess",
+            "sure",
+            "go ahead",
+            "proceed",
+            "u can",
+            "you can"
+          ]
+        }
+      ],
+      "fuzzy_match": true
+    }
+  ],
+  "metadata": {
+    "api_version": {
+      "major_version": "v2",
+      "minor_version": "2018-11-08"
+    }
+  },
+  "dialog_nodes": [
+    {
+      "type": "standard",
+      "title": "Location Selection",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "please select your prefereble location"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1593707953779",
+      "conditions": "true",
+      "dialog_node": "node_10_1593768372240",
+      "previous_sibling": "node_2_1593761375280"
+    },
+    {
+      "type": "standard",
+      "parent": "node_10_1593707953779",
+      "dialog_node": "node_7_1593770904822",
+      "previous_sibling": "node_10_1593768372240"
+    },
+    {
+      "type": "frame",
+      "title": "Candidate Details",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "please share your resume"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_10_1593707953779",
+      "metadata": {
+        "_customization": {
+          "mcr": false
+        }
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_10_1593768372240"
+      },
+      "conditions": "@confirmation:yes",
+      "dialog_node": "node_2_1593761375280"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1593761375280",
+      "variable": "$Education",
+      "dialog_node": "slot_9_1593762400202",
+      "previous_sibling": "handler_1_1593762349303"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1593761375280",
+      "variable": "$number",
+      "dialog_node": "slot_2_1593762429796",
+      "previous_sibling": "slot_9_1593762400202"
+    },
+    {
+      "type": "slot",
+      "parent": "node_2_1593761375280",
+      "variable": "$percentage",
+      "dialog_node": "slot_5_1594411677499",
+      "previous_sibling": "slot_2_1593762429796"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_2_1593761375280",
+      "event_name": "focus",
+      "dialog_node": "handler_1_1593762349303"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Enter your highest degree percentage"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_5_1594411677499",
+      "event_name": "focus",
+      "dialog_node": "handler_2_1594411677504",
+      "previous_sibling": "handler_1_1594411677504"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_5_1594411677499",
+      "context": {
+        "percentage": "@sys-percentage"
+      },
+      "conditions": "@sys-percentage",
+      "event_name": "input",
+      "dialog_node": "handler_1_1594411677504"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "Please Give your highest degree "
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_9_1593762400202",
+      "event_name": "focus",
+      "dialog_node": "handler_6_1593762400205",
+      "previous_sibling": "handler_4_1593762400205"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_9_1593762400202",
+      "context": {
+        "Education": "@Education"
+      },
+      "conditions": "@Education",
+      "event_name": "input",
+      "dialog_node": "handler_4_1593762400205"
+    },
+    {
+      "type": "event_handler",
+      "output": {
+        "text": {
+          "values": [
+            "How many Internships you have done?"
+          ],
+          "selection_policy": "sequential"
+        }
+      },
+      "parent": "slot_2_1593762429796",
+      "event_name": "focus",
+      "dialog_node": "handler_9_1593762429799",
+      "previous_sibling": "handler_8_1593762429799"
+    },
+    {
+      "type": "event_handler",
+      "output": {},
+      "parent": "slot_2_1593762429796",
+      "context": {
+        "number": "@sys-number"
+      },
+      "conditions": "@sys-number",
+      "event_name": "input",
+      "dialog_node": "handler_8_1593762429799"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hey there, Good Afternoon.I am your recruiter guide....Ask your query!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1594799855696",
+      "conditions": "@Greetings:(Good AfterNoon)",
+      "dialog_node": "response_8_1594800016031",
+      "previous_sibling": "response_3_1594799995948"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello, I am your recruiter guide....Ask your query!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1594799855696",
+      "conditions": "@Greetings:Hello",
+      "dialog_node": "response_6_1594800036955",
+      "previous_sibling": "response_8_1594800016031"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hey there, I am your recruiter guide....Ask your query!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1594799855696",
+      "conditions": "@Greetings:Hey",
+      "dialog_node": "response_1_1594800055851",
+      "previous_sibling": "response_6_1594800036955"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1594799855696",
+      "dialog_node": "response_6_1594800076216",
+      "previous_sibling": "response_1_1594800055851"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hey there, Good evening.I am your recruiter guide....Ask your query!"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1594799855696",
+      "conditions": "@Greetings:(Good Evening)",
+      "dialog_node": "response_3_1594799995948",
+      "previous_sibling": "response_3_1594799977122"
+    },
+    {
+      "type": "response_condition",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hey There, Good Morning.Have a Nice Day.How can I help You?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "parent": "node_3_1594799855696",
+      "conditions": "@Greetings:GoodMorning",
+      "dialog_node": "response_3_1594799977122"
+    },
+    {
+      "type": "standard",
+      "title": "Apply for a job",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "You now can apply for a job. Please give us the following details correctly.Type 'Yes' to proceed."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "context": {
+        "number": null,
+        "Email_Id": null,
+        "Education": null,
+        "percentage": null
+      },
+      "next_step": {
+        "behavior": "jump_to",
+        "selector": "user_input",
+        "dialog_node": "node_2_1593761375280"
+      },
+      "conditions": "#apply_job",
+      "dialog_node": "node_10_1593707953779",
+      "previous_sibling": "node_4_1594799384569"
+    },
+    {
+      "type": "standard",
+      "title": "application status",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Please specify your application ID"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#know_your_application_status && @applicationstatus",
+      "dialog_node": "node_4_1594799384569",
+      "previous_sibling": "node_4_1593617191033"
+    },
+    {
+      "type": "standard",
+      "title": "Anything else",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "I didn't understand. Try again."
+              },
+              {
+                "text": "Sorry,I'm not understanding.Can you try again?"
+              },
+              {
+                "text": "I didn't get you.Try again."
+              },
+              {
+                "text": "Sorry, I didn't catch that. Can you try again?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "anything_else",
+      "dialog_node": "Anything else",
+      "previous_sibling": "node_9_1594800556950",
+      "disambiguation_opt_out": true
+    },
+    {
+      "type": "standard",
+      "title": "interacting",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Do You have any more queries?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@Stopping_Words:Ok",
+      "dialog_node": "node_10_1594800608097",
+      "previous_sibling": "node_10_1593707953779"
+    },
+    {
+      "type": "standard",
+      "title": "thank you",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Thank u for spending your valuable time with us. Happy to See u"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "@Stopping_Words:(Thank You)",
+      "dialog_node": "node_9_1594800556950",
+      "previous_sibling": "node_10_1594800608097"
+    },
+    {
+      "type": "standard",
+      "title": "Greetings",
+      "metadata": {
+        "_customization": {
+          "mcr": true
+        }
+      },
+      "conditions": "#WelcomeGreetings && @Greetings",
+      "dialog_node": "node_3_1594799855696",
+      "previous_sibling": "Welcome"
+    },
+    {
+      "type": "standard",
+      "title": "Job query",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "you can apply for job in 3 phases that are selected by the company at the time of posting a job."
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "#apply_job && @apply_enquiry",
+      "dialog_node": "node_4_1593617191033",
+      "previous_sibling": "node_3_1594799855696"
+    },
+    {
+      "type": "standard",
+      "title": "Welcome",
+      "output": {
+        "generic": [
+          {
+            "values": [
+              {
+                "text": "Hello. How can I help you?"
+              }
+            ],
+            "response_type": "text",
+            "selection_policy": "sequential"
+          }
+        ]
+      },
+      "conditions": "welcome",
+      "dialog_node": "Welcome"
+    }
+  ],
+  "counterexamples": [],
+  "system_settings": {
+    "off_topic": {
+      "enabled": true
+    },
+    "disambiguation": {
+      "prompt": "Did you mean:",
+      "enabled": true,
+      "randomize": true,
+      "max_suggestions": 5,
+      "suggestion_text_policy": "title",
+      "none_of_the_above_prompt": "None of the above"
+    },
+    "system_entities": {
+      "enabled": true
+    },
+    "human_agent_assist": {
+      "prompt": "Did you mean:"
+    },
+    "spelling_auto_correct": true
+  },
+  "learning_opt_out": false,
+  "name": "Candidate Chatbot",
+  "language": "en",
+  "description": ""
+}
